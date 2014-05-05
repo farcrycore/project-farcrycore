@@ -1,3 +1,5 @@
+<cfimport taglib="/farcry/core/tags/farcry" prefix="farcry" />
+
 <!--- Set up the application. --->	
 <cfset THIS.Name = "farcrycore" />
 <cfset THIS.displayName = "FarCry Core" />
@@ -18,13 +20,22 @@
 <cfset THIS.dsn = "farcrycore" /> 
 <cfset THIS.dbType = "mysql" /> 
 <cfset THIS.dbOwner = "" /> 
-<cfset THIS.plugins = "" /> 
+<cfset THIS.plugins = "" /> 	
 
 <!--- 
 THE VIRTUAL WEBSERVER PROJECT FOLDER
  --->
 <cfset THIS.projectURL = "" />
 <cfset THIS.webtopURL = "/webtop" />
+
+
+<!--- local dev for database --->
+<farcry:machineSpecific name="Greyhame.local,greyhame.daemon.com.au,greyhame.bigpond">
+	<!--- GB: Local MacBook Air --->
+	<cfset this.dsn = "farcrycore-local" />
+	<cfset THIS.webtopURL = "/farcry/core/webtop" />
+</farcry:machineSpecific>
+
 
 <!--- 
 A key that can be used on updateapp url variable to update the application scope

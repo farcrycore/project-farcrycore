@@ -20,7 +20,7 @@
 <cfset THIS.dsn = "farcrycore" /> 
 <cfset THIS.dbType = "mysql" /> 
 <cfset THIS.dbOwner = "" /> 
-<cfset THIS.plugins = "" /> 	
+<cfset THIS.plugins = "googleud,googleanalytics" /> 	
 
 <!--- 
 THE VIRTUAL WEBSERVER PROJECT FOLDER

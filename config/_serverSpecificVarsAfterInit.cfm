@@ -1,51 +1,80 @@
-<cfsetting enablecfoutputonly="yes">
-<!--- @@Copyright: Daemon Pty Limited 2002-2008, http://www.daemon.com.au --->
-<!--- @@License:
-    This file is part of FarCry.
-
-    FarCry is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    FarCry is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public License
-    along with FarCry.  If not, see <http://www.gnu.org/licenses/>.
---->
-
+<cfsetting enablecfoutputonly="true">
 <!--- THIS WILL BE INCLUDED AFTER THE FARCRY INIT HAS BEEN RUN BUT ONLY ON APPLICATION INITIALISATION. --->
 
-
-<cfimport taglib="/farcry/core/tags/farcry" prefix="farcry" />
-
-
-<!--------------------------------- 
-PUT PRODUCTION OR DEFAULT CODE HERE
- --------------------------------->
-
-
-
-<!--------------------------------------------------- 
-PUT DEVELOPER OR STAGING/TESTING SPECIFIC CODE BELOW
- --------------------------------------------------->
-
 <!--- 
-<farcry:machineSpecific name="DEVELOPER_1_MACHINE_NAME_HERE">
-    <!--- DEVELOPER SPECIFIC OVERRIDING CODE HERE --->
-</farcry:machineSpecific>    
+ // Amazon S3 CDN 
+--------------------------------------------------------------------------------->
+<!---
+<cfset application.aws.accesskeyid = "" />
+<cfset application.aws.secretkey = "" />
+ 
+<cfset application.aws.imgPrefix = "//s3.amazonaws.com/" & "io-farcrycore-org/live" />
+ 
+<cfset application.fc.lib.cdn.setLocation(
+    name="images_old",
+    cdn="local",
+    locationinfo=application.fc.lib.cdn.getLocation("images")) />
 
-<farcry:machineSpecific name="DEVELOPER_2_MACHINE_NAME_HERE">
-    <!--- DEVELOPER SPECIFIC OVERRIDING CODE HERE --->
-</farcry:machineSpecific>    
+<cfset application.fc.lib.cdn.setLocation(
+    name="images",
+    cdn="s3",
+    accessKeyId=application.aws.accesskeyid,
+    awsSecretKey=application.aws.secretkey,
+    bucket="io-farcrycore-org",
+    region="",
+    security="public",
+    pathPrefix="/live",
+    admins=["modius@daemon.com.au"]) />
+    
+<cfset application.fc.lib.cdn.setLocation(
+    name="archive_old",
+    cdn="local",
+    locationinfo=application.fc.lib.cdn.getLocation("archive")) />
+    
+<cfset application.fc.lib.cdn.setLocation(
+    name="archive",
+    cdn="s3",
+    accessKeyId=application.aws.accesskeyid,
+    awsSecretKey=application.aws.secretkey,
+    bucket="io-farcrycore-org",
+    region="",
+    security="private",
+    urlExpiry=1800,
+    pathPrefix="/live/mediaArchive",
+    admins=["modius@daemon.com.au"]) />
+    
+<cfset application.fc.lib.cdn.setLocation(
+    name="publicfiles_old",
+    cdn="local",
+    locationinfo=application.fc.lib.cdn.getLocation("publicfiles")) />
+    
+<cfset application.fc.lib.cdn.setLocation(
+    name="publicfiles",
+    cdn="s3",
+    accessKeyId=application.aws.accesskeyid,
+    awsSecretKey=application.aws.secretkey,
+    bucket="io-farcrycore-org",
+    region="",
+    security="public",
+    pathPrefix="/live/files",
+    admins=["modius@daemon.com.au"]) />
 
-<farcry:machineSpecific name="DEVELOPER_3_MACHINE_NAME_HERE">
-    <!--- DEVELOPER SPECIFIC OVERRIDING CODE HERE --->
-</farcry:machineSpecific>    
- --->
+<cfset application.fc.lib.cdn.setLocation(
+    name="privatefiles_old",
+    cdn="local",
+    locationinfo=application.fc.lib.cdn.getLocation("privatefiles")) />
+    
+<cfset application.fc.lib.cdn.setLocation(
+    name="privatefiles",
+    cdn="s3",
+    accessKeyId=application.aws.accesskeyid,
+    awsSecretKey=application.aws.secretkey,
+    bucket="io-farcrycore-org",
+    region="",
+    security="private",
+    urlExpiry=1800,
+    pathPrefix="/live/securefiles",
+    admins=["modius@daemon.com.au"]) />
+--->
 
-
-<cfsetting enablecfoutputonly="no">
+<cfsetting enablecfoutputonly="false">

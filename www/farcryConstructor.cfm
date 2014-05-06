@@ -22,19 +22,19 @@
 <cfset THIS.dbOwner = "" /> 
 <cfset THIS.plugins = "googleud,googleanalytics" /> 	
 
-<!--- 
-THE VIRTUAL WEBSERVER PROJECT FOLDER
- --->
-<cfset THIS.projectURL = "" />
-<cfset THIS.webtopURL = "/webtop" />
-
 
 <!--- local dev for database --->
 <farcry:machineSpecific name="Greyhame.local,greyhame.daemon.com.au,greyhame.bigpond">
 	<!--- GB: Local MacBook Air --->
 	<cfset this.dsn = "farcrycore-local" />
-	<cfset THIS.webtopURL = "/farcry/core/webtop" />
 </farcry:machineSpecific>
+
+
+<!--- 
+THE VIRTUAL WEBSERVER PROJECT FOLDER
+ --->
+<cfset THIS.projectURL = "" />
+<cfset THIS.webtopURL = "/farcry/core/webtop" />
 
 
 <!--- 

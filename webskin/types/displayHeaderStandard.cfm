@@ -11,6 +11,7 @@
 <head>
 	<title><cfif len(stParam.title)>#stParam.title# - </cfif>FarCry Core 7.0</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,700">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">

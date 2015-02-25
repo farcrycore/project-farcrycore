@@ -1,0 +1,3 @@
+core,https://github.com/farcrycore/core.git,p700
+plugins/googleanalytics,https://github.com/farcrycore/plugin-googleanalytics.git,master
+projects/farcrycore,https://github.com/farcrycore/project-farcrycore.git,master

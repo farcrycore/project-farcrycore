@@ -1,4 +1,5 @@
-<cfcomponent displayname="Raw HTML Page" extends="farcry.core.packages.types.types"
+<cfcomponent 
+	displayname="Raw HTML Page" extends="farcry.core.packages.types.types"
 	bFriendly="true" bObjectBroker="true" bUseInTree="true"
 	hint="A raw HTML Page content type for advanced users to hand build the HTML markup of a page">
 

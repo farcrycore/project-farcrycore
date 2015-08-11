@@ -1,5 +1,3 @@
-<cfimport taglib="/farcry/core/tags/farcry" prefix="farcry" />
-
 <!--- Set up the application. --->	
 <cfset THIS.Name = "farcrycore" />
 <cfset THIS.displayName = "FarCry Core" />
@@ -16,18 +14,12 @@
 <cfset THIS.mappings = structNew() />
 
 <!--- FARCRY SPECIFIC --->
-<cfset THIS.locales = "en_AU,en_US" />
+<cfset THIS.bUseEnv = true>
+<cfset THIS.locales = "en_AU" />
 <cfset THIS.dsn = "farcrycore" /> 
 <cfset THIS.dbType = "mysql" /> 
 <cfset THIS.dbOwner = "" /> 
-<cfset THIS.plugins = "googleud,googleanalytics" /> 	
-
-
-<!--- local dev for database --->
-<farcry:machineSpecific name="Greyhame.local,greyhame.daemon.com.au,greyhame.bigpond">
-	<!--- GB: Local MacBook Air --->
-	<cfset this.dsn = "farcrycore-local" />
-</farcry:machineSpecific>
+<cfset THIS.plugins = "googleud,googleanalytics,raygun" /> 	
 
 
 <!--- 

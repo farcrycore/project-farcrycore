@@ -54,8 +54,8 @@
 					<h3><i class="fa fa-bookmark"></i> Documentation</h3>
 					<ul class="list-unstyled">
 						<li><a href="https://github.com/farcrycore">FarCry Core on GitHub</a> <i class="fa fa-github"></i></li>
-						<li><a href="http://bugs.farcrycms.org/">FarCry Bug Tracker (JIRA)</a></li>
-						<li><a href="http://docs.farcrycms.org/">Documentation Wiki</a></li>
+						<li><a href="https://farcry.jira.com/browse/FC">FarCry Bug Tracker (JIRA)</a></li>
+						<li><a href="https://farcry.jira.com/wiki/display/FCDEV60/Home">Documentation Wiki</a></li>
 						<li><a href="http://docs.farcrycore.org/">API Documentation</a></li>
 						<li><a href="https://farcry.jira.com/wiki/download/attachments/12451867/FC60-training-manual.pdf?version=1&modificationDate=1299903122723&api=v2">Contributor Guide</a></li>
 					</ul>

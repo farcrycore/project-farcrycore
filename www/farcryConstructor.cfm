@@ -26,7 +26,7 @@
 THE VIRTUAL WEBSERVER PROJECT FOLDER
  --->
 <cfset THIS.projectURL = "" />
-<cfset THIS.webtopURL = "/farcry/core/webtop" />
+<cfset THIS.webtopURL = "/webtop" />
 
 
 <!--- 

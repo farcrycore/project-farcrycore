@@ -170,7 +170,7 @@
 
 
 			// $.ajax('https://discourse.farcrycore.org/c/blog/l/latest.json').then(function (result) {
-			// 	$('#farcryblog').discourse(result);
+			// 	$('##farcryblog').discourse(result);
 			// });
 
 			var result = `
@@ -192,7 +192,7 @@
                 "category_id": 12,
                 "closed": false,
                 "created_at": "2014-05-05T04:07:19.886Z",
-                "excerpt": "11 years in the making, the long anticipated Shiny release is available.  FarCry 7.0 is an incredible achievement; an enterprise level web publishing platform with incredible flexibility. &#39;Tailor made content management&#39;&hellip;",
+                "excerpt": "11 years in the making, the long anticipated Shiny release is available.  FarCry 7.0 is an incredible achievement; an enterprise level web publishing platform with incredible flexibility. &##39;Tailor made content management&##39;&hellip;",
                 "fancy_title": "FarCry 7 (codename: Shiny) released",
                 "featured_link": null,
                 "has_summary": false,
@@ -924,7 +924,7 @@
     ]
 }
 				`;
-				$('#farcryblog').discourse(JSON.parse(result));
+				$('##farcryblog').discourse(JSON.parse(result));
 
 			});
 		</script>

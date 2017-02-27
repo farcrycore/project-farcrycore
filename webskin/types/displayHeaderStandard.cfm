@@ -36,7 +36,7 @@
 			<nav class="collapse navbar-collapse" role="navigation">
 				<skin:simpleNav navID="#application.navid.home#" id="nav" class="nav navbar-nav" depth="1" bIncludeHome="false">	
 				<div class="pull-right">
-					<span class="nav-button nav-button-blog"><a href="http://blog.farcrycore.org/">Blog</a></span>
+					<span class="nav-button nav-button-blog"><a href="http://discourse.farcrycore.org/c/blog">Blog</a></span>
 					<span class="nav-button nav-button-forum"><a href="http://discourse.farcrycore.org/">Forum</a></span>
 				</div>
 			</nav>

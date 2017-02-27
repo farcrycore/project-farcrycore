@@ -63,6 +63,7 @@
 				<div class="col-sm-4">
 					<h3><i class="fa fa-group"></i> Community</h3>
 					<ul class="list-unstyled">
+						<li><a href="http://discourse.farcrycore.org/c/blog">FarCry Core Blog</a></li>
 						<li><a href="http://discourse.farcrycore.org/">FarCry Core Forum</a></li>
 						<li><a href="http://groups.google.com/group/farcry-dev">Old farcry-dev Forum</a></li>
 						<li><a href="https://plus.google.com/communities/107650642291146266954">Google+ Community</a> <i class="fa fa-google-plus"></i></li>
@@ -148,7 +149,7 @@
 							var topicDate       = new Date(topic.created_at),
 									topicDateMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 									topicImg        = topic.image_url,
-									topicLink       = 'https://discourse.farcrycore.org/t/' + topic.slug + '/' + topic.id;
+									topicLink       = 'http://discourse.farcrycore.org/t/' + topic.slug + '/' + topic.id;
 
 							if (topic.image_url == null) {
 								topicImg = 'http://placehold.it/360x222?text=FarCry+Core+Blog';
